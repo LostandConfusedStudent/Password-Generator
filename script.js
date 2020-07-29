@@ -14,8 +14,8 @@ function writePassword() {
     alert("Enter a number between 8 and 128 please.")
     return writePassword();
   }
-  var uppercase = confirm("Want uppercase letters?");
-  var lowercase = confirm("Want lowercase letters?");
+  var uppers = confirm("Want uppercase letters?");
+  var lowers = confirm("Want lowercase letters?");
   var numbers = confirm("Want numbers?");
   var symbols = confirm("Want symbols?");
 
@@ -35,6 +35,24 @@ function writePassword() {
   var randomizer = [];
 
   // If statements to push array sets into empty array depending on user input
+
+  if (uppers === true) {
+    emptyArray.push(addUppers);
+  }
+
+  if (lowers === true) {
+    emptyArray.push(addLowers);
+  }
+
+  if (numbers === true) {
+    emptyArray.push(addNumbers);
+  }
+
+  if (symbols === true) {
+    emptyArray.push(addSymbols);
+  }
+
+  console.log(emptyArray);
 
   // For loop to randomize the data
 
