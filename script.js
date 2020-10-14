@@ -25,13 +25,13 @@ function writePassword() {
   var addUppers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var addLowers = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var addNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  var addSymbols = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "[", "}", "]", ":", ";", '"', "'", ",", ".", "<", ">", "?", "/", "|", "\\", " "]
+  var addSymbols = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "{", "[", "}", "]", ":", ";", "\"", "'", ",", ".", "<", ">", "?", "/", "|", "\\", " "]
 
 
   // Want empty arrays to push arrays sets into based on user input and then randomize the data
 
   var emptyArray = [];
-  
+
   var passwordRandomizer = [];
 
   // If statements to push array sets into empty array depending on user input
@@ -57,7 +57,7 @@ function writePassword() {
   // For loop to randomize the data
 
   for (var i = 0; i < passwordLength; i++) {
-    passwordRandomizer.push(emptyArray[Math.floor(Math.random()*emptyArray.length)]);
+    passwordRandomizer.push(emptyArray[Math.floor(Math.random() * emptyArray.length)]);
     console.log(passwordRandomizer);
   }
 
@@ -65,7 +65,6 @@ function writePassword() {
 
   const passwordContainer = document.getElementById("password");
   passwordContainer.value = passwordRandomizer.join("");
-
 }
 
 // Add event listener to generate button
